@@ -7,13 +7,6 @@ syntax: glob
 #*.off
 *.old
 
-# eclipse conf file
-.settings
-.classpath
-.project
-.manager
-.scala_dependencies
-
 # idea
 .idea
 *.iml
