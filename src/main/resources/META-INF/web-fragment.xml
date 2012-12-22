@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment id="bayeux" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd">
+	<display-name>net.kbserve.web.comet</display-name>
+	<name>web</name>
+	<servlet>
+		<servlet-name>Grizzly Cometd Servlet</servlet-name>
+		<servlet-class>com.sun.grizzly.cometd.servlet.CometdServlet</servlet-class>
+		<init-param>
+			<param-name>expirationDelay</param-name>
+			<param-value>360000</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Grizzly Cometd Servlet</servlet-name>
+		<url-pattern>/cometd/*</url-pattern>
+	</servlet-mapping>
+</web-fragment>
